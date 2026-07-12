@@ -20,13 +20,19 @@ def main() -> None:
 
     recommendations = recommend_songs(user_prefs, songs, k=5)
 
+    import textwrap
     print("\nTop recommendations:\n")
-    for rec in recommendations:
-        # You decide the structure of each returned item.
-        # A common pattern is: (song, score, explanation)
+    for i, rec in enumerate(recommendations, start=1):
         song, score, explanation = rec
-        print(f"{song['title']} - Score: {score:.2f}")
-        print(f"Because: {explanation}")
+        title = song.get("title", "<unknown>")
+        artist = song.get("artist")
+        header = f"{i}. {title}"
+        if artist:
+            header += f" — {artist}"
+        print(header)
+        print(f"   Score: {score:.2f}")
+        wrapped = textwrap.fill(explanation, width=72, subsequent_indent=' ' * 11)
+        print(f"   Reasons: {wrapped}")
         print()
 
 

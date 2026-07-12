@@ -19,6 +19,12 @@ Replace this paragraph with your own summary of what your version does.
 
 Explain your design in plain language.
 
+
+A real world recommendation works based on user's listening habits, playlists. Spotify uses this information to make recommendations to the user on what song they potentially would like based on genre and energy. My app will lean more towards making recommendations to the user based on the genre they listen to. I chose to prioritize genre over mood because the user more than likely listens to most of the same genre so it will connect with the user more than just a change in mood. The features will include a title, artist nae, genre, mood, id, favorite genre, energy, tempo_bpm.
+
+
+The app will award 3 points for a genre match and will award 1 point for a mood match. Therefore, this app will over prioritize same genre, ignoring great songs that match the user's mood.
+
 Some prompts to answer:
 
 - What features does each `Song` use in your system
@@ -78,7 +84,30 @@ Paste a sample of your recommender's output here as a text block so a reader can
 #   2. ...
 #   3. ...
 ```
+Top recommendations:
 
+1. Sunrise City — Neon Echo
+   Score: 4.98
+   Reasons: genre matches (pop), mood matches (happy), energy: 0.82 (target: 0.80,
+           distance: 0.02)
+
+2. Gym Hero — Max Pulse
+   Score: 3.87
+   Reasons: genre matches (pop), energy: 0.93 (target: 0.80, distance: 0.13)
+
+3. Workout Anthem — Max Pulse
+   Score: 3.85
+   Reasons: genre matches (pop), energy: 0.95 (target: 0.80, distance: 0.15)
+
+4. Rooftop Lights — Indigo Parade
+   Score: 1.96
+   Reasons: mood matches (happy), energy: 0.76 (target: 0.80, distance: 0.04)
+
+5. Horizon Drifters — Indigo Parade
+   Score: 1.90
+   Reasons: mood matches (happy), energy: 0.70 (target: 0.80, distance: 0.10)
+
+   
 **Screenshot or video** *(optional)*: <!-- Insert a screenshot or demo video link here -->
 
 ---
