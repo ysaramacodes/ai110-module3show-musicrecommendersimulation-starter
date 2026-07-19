@@ -149,3 +149,28 @@ Write 1 to 2 paragraphs here about what you learned:
 
 
 
+Recommenders turn data into predictions by getting user preferneces and applying scoring logic to the songs in the catalalog and the top 5 songs are returned to the user. Based on this prediction the user should like the songs the recommender returns. Recommenders would have biases based on how the scoring logic is. In this case the most points rewarded is for genre match and is 3 points so this system will always return any song with the same genre.
+
+
+
+
+
+
+
+
+
+
+
+
+# MY EXPERIMENT 
+The Impact:
+
+✓ Energy is now the dominant factor — in profile 3, "Quiet Ballad" (0.30 energy) beats "Storm Runner" (0.91 energy) despite Storm Runner being a better genre+mood match
+
+✓ Same songs still top the list in profiles 1, 8, 9 (all pop+happy variants)
+
+✓ Score compression — all scores lower overall because genre weight halved
+
+Conclusion: Doubling energy weight fundamentally changes which songs get recommended. Energy closeness becomes more important than exact genre/mood matches. This test confirms that the current weight distribution (genre 3, mood 1, energy 1) is probably better-balanced than this alternative.
+
+# command - python3 src/main.py 1 table
